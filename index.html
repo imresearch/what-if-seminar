@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gitment Demo Page</title>
+  <meta name="viewport" content="width=640, user-scalable=no">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/default.css">
+</head>
+<body>
+  <div>
+    <h1>Gitment Demo</h1>
+    <p>Test gitment.</p>
+    <p>You can login with GitHub and leave your comments below.</p>
+  </div>
+  <div id="container"></div>
+
+  <script src="./gitment/gitment.browser.js"></script>
+  <script>
+    var clientId = '27f4d59c868140d98ef1'
+    var clientSecret = '518d43d3ef5733d28091cab8f6cdace4a72a9280'
+    var gitment = new Gitment({
+      id: '',
+      owner: 'imresearch',
+      repo: 'what-if-seminar',
+      oauth: {
+        client_id: clientId,
+        client_secret: clientSecret,
+      },
+    })
+
+    gitment.render('container')
+  </script>
+</body>
+</html>
